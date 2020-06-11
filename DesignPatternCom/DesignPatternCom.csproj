@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C3A88911-DA6F-49B6-A098-7EE197F1812B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatternCom</RootNamespace>
+    <AssemblyName>DesignPatternCom</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\AbstractCarFactory.cs" />
+    <Compile Include="Entity\Benz.cs" />
+    <Compile Include="Entity\BenzCarFactory.cs" />
+    <Compile Include="Entity\BuickFactory.cs" />
+    <Compile Include="Entity\Car.cs" />
+    <Compile Include="Entity\CarBuilder.cs" />
+    <Compile Include="Entity\CarFactory.cs" />
+    <Compile Include="Entity\CarProcessor.cs" />
+    <Compile Include="Entity\CarSeller.cs" />
+    <Compile Include="Entity\EnCore.cs" />
+    <Compile Include="Entity\Geely.cs" />
+    <Compile Include="Entity\GeelyCarFactory.cs" />
+    <Compile Include="Entity\I5.cs" />
+    <Compile Include="Entity\LandCross.cs" />
+    <Compile Include="Entity\RoweiFactory.cs" />
+    <Compile Include="Entity\RX5.cs" />
+    <Compile Include="Entity\Sedan.cs" />
+    <Compile Include="Entity\SingleApp.cs" />
+    <Compile Include="Entity\SUV.cs" />
+    <Compile Include="Entity\SUVBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

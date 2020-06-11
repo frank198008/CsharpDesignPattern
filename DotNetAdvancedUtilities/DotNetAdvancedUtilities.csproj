@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD3F34E7-E175-44CD-9365-FE9AEE01B420}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNetAdvancedUtilities</RootNamespace>
+    <AssemblyName>DotNetAdvancedUtilities</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContextPattern\LogTrackLocation.cs" />
+    <Compile Include="ContextPattern\Request.cs" />
+    <Compile Include="ContextPattern\ServiceContextManager.cs" />
+    <Compile Include="ContextPattern\ServiceProxy.cs" />
+    <Compile Include="ContextPattern\ServiceProxyRequest.cs" />
+    <Compile Include="ContextPattern\SoaServiceCallContext.cs" />
+    <Compile Include="ContextPattern\TransactionActionInfo.cs" />
+    <Compile Include="FluentProgramPattern\RequestConfigContext.cs" />
+    <Compile Include="FluentProgramPattern\RequestConfigManager.cs" />
+    <Compile Include="FluentProgramPattern\RequestContext.cs" />
+    <Compile Include="FluentProgramPattern\RequestProtocol.cs" />
+    <Compile Include="LanguageComponentPattern\Core\ForLanguageComponent.cs" />
+    <Compile Include="LanguageComponentPattern\Core\IfLanguageComponent.cs" />
+    <Compile Include="LanguageComponentPattern\Core\LanguageComponent.cs" />
+    <Compile Include="LanguageComponentPattern\Core\LanguageComponentManager.cs" />
+    <Compile Include="LanguageComponentPattern\Core\LanguageComponentManagerFactory.cs" />
+    <Compile Include="LanguageComponentPattern\Core\LanguageComponentTrackMark.cs" />
+    <Compile Include="LanguageComponentPattern\Core\SendEmailOrderItemConfirmComponent.cs" />
+    <Compile Include="LanguageComponentPattern\Data\Customer.cs" />
+    <Compile Include="LanguageComponentPattern\Data\CustomerType.cs" />
+    <Compile Include="LanguageComponentPattern\Data\Order.cs" />
+    <Compile Include="LanguageComponentPattern\Data\OrderItem.cs" />
+    <Compile Include="LanguageComponentPattern\Data\Product.cs" />
+    <Compile Include="LanguageComponentPattern\LanguageComponentClient.cs" />
+    <Compile Include="PassivationPattern\Core\BusinessManager.cs" />
+    <Compile Include="PassivationPattern\Core\GeneralManager.cs" />
+    <Compile Include="PassivationPattern\Core\OrderExamineApproveManager.cs" />
+    <Compile Include="PassivationPattern\Core\OrderExamineApproveManagerHandler.cs" />
+    <Compile Include="PassivationPattern\Data\CustomerInfo.cs" />
+    <Compile Include="PassivationPattern\Core\Informationer.cs" />
+    <Compile Include="PassivationPattern\Data\Order.cs" />
+    <Compile Include="PassivationPattern\Data\OrderItem.cs" />
+    <Compile Include="PassivationPattern\Data\Product.cs" />
+    <Compile Include="PassivationPattern\PassivationClient.cs" />
+    <Compile Include="PipelinePattern\BuildOperationLogicPipelineForApp.cs" />
+    <Compile Include="PipelinePattern\BuildOperationLogicPipelineForClient.cs" />
+    <Compile Include="PipelinePattern\ClientPipelineModules.cs" />
+    <Compile Include="PipelinePattern\ClientPipelineObject.cs" />
+    <Compile Include="PipelinePattern\IBuildOperationLogicObject.cs" />
+    <Compile Include="PipelinePattern\OperationLogicPipelineObject.cs" />
+    <Compile Include="PipelinePattern\ReduceRequestBody.cs" />
+    <Compile Include="PipelinePattern\Request.cs" />
+    <Compile Include="PipelinePattern\RequestClientType.cs" />
+    <Compile Include="PipelinePattern\RequestContent.cs" />
+    <Compile Include="PipelinePattern\ServicePipelineModules.cs" />
+    <Compile Include="PipelinePattern\ServicePipelineObject.cs" />
+    <Compile Include="PipelinePattern\TransferRequestForRest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderPattern\ILogSaveProvider.cs" />
+    <Compile Include="ProviderPattern\LogContent.cs" />
+    <Compile Include="ProviderPattern\LogEntity.cs" />
+    <Compile Include="ProviderPattern\LogEntityFactory.cs" />
+    <Compile Include="ProviderPattern\LogLevel.cs" />
+    <Compile Include="ProviderPattern\LogSaveBaseProvider.cs" />
+    <Compile Include="ProviderPattern\LogSaveLocalhostProvider.cs" />
+    <Compile Include="ProviderPattern\LogType.cs" />
+    <Compile Include="SpecificationOutsideHitchPattern\Core\OrderBusiness.cs" />
+    <Compile Include="SpecificationOutsideHitchPattern\Core\OrderSpecificationIndex.cs" />
+    <Compile Include="SpecificationOutsideHitchPattern\Core\OrderSpecificationManager.cs" />
+    <Compile Include="SpecificationOutsideHitchPattern\Core\OrderSpecificationManagerFactory.cs" />
+    <Compile Include="SpecificationOutsideHitchPattern\Core\SubmitOrderSpecification.cs" />
+    <Compile Include="SpecificationOutsideHitchPattern\Data\Customer.cs" />
+    <Compile Include="SpecificationOutsideHitchPattern\Data\CustomerType.cs" />
+    <Compile Include="SpecificationOutsideHitchPattern\Data\Order.cs" />
+    <Compile Include="SpecificationOutsideHitchPattern\SpecificationOutsideHitchClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
